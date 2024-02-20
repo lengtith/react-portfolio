@@ -1,7 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
-import Layout from './assets/components/layout';
-import Home from './assets/components/home';
+import Layout from './components/layout';
+import Home from './components/home';
 import './App.scss';
+import About from './components/about';
+import Contact from './components/contact';
 
 const App = () => {
   return (
@@ -9,6 +11,8 @@ const App = () => {
       <Routes>
           <Route path="/" element={<Layout />}>
         <Route index element={<Home />}/>
+        <Route path="about" element={<About />}/>
+        <Route path="contact" element={<Contact />}/>
         </Route>
       </Routes>
     </>
